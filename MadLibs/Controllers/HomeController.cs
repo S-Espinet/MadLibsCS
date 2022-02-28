@@ -28,5 +28,27 @@ namespace MadLibs.Controllers
       return View(myStoryVariable);
     }
 
+    [Route("/form2")]
+    public ActionResult Form2() { return View(); }
+
+    [Route("/story2")]
+    public ActionResult Story2(string adjective1, string adjective2, string adjective3, string adjective4, string noun1, string noun2, string noun3, string verb1, string ptVerb1, string ptVerb2, string adverb1, string adverb2)
+    {
+      Story2Variable myStory2Variable = new Story2Variable();
+      myStory2Variable.Adjective1 = adjective1;
+      myStory2Variable.Adjective2 = adjective2;
+      myStory2Variable.Adjective3 = adjective3;
+      myStory2Variable.Adjective4 = adjective4;
+      myStory2Variable.Noun1 = noun1;
+      myStory2Variable.Noun2 = noun2;
+      myStory2Variable.Noun3 = noun3;
+      myStory2Variable.Verb1 = verb1;
+      myStory2Variable.PtVerb1 = ptVerb1;
+      myStory2Variable.PtVerb2 = ptVerb2;
+      myStory2Variable.Adverb1 = adverb1;
+      myStory2Variable.Adverb2 = adverb2;
+      return View(myStory2Variable);
+    }
+
   }
 }
