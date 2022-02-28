@@ -1,8 +1,12 @@
-namespace FriendLetter.Models
+namespace MadLibs.Models
 {
-  public class LetterVariable
+  public class StoryVariable
   {
-    public string Recipient { get; set; }
-    public string Sender { get; set; }
+    public string Person1 { get; set; }
+    public string Person2 { get; set; }
+    public string Noun { get; set; }
+    public string Verb { get; set; }
+    public string Exclamation { get; set; }
+    public string Animal { get; set; }
   }
 }

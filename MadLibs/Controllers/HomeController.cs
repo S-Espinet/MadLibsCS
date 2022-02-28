@@ -9,22 +9,23 @@ namespace MadLibs.Controllers
     [Route("/")]
     public ActionResult Instructions()
     {
-      LetterVariable myLetterVariable = new LetterVariable();
-      myLetterVariable.Recipient = "Lina";
-      myLetterVariable.Sender = "Jasmine";
-      return View(myLetterVariable);
+      return View();
     }
 
     [Route("/form")]
     public ActionResult Form() { return View(); }
 
     [Route("/story")]
-    public ActionResult Postcard(string recipient, string sender)
+    public ActionResult Story(string recipient, string sender)
     {
-      LetterVariable myLetterVariable = new LetterVariable();
-      myLetterVariable.Recipient = recipient;
-      myLetterVariable.Sender = sender;
-      return View(myLetterVariable);
+      StoryVariable myStoryVariable = new StoryVariable();
+      myStoryVariable.Person1 = person1;
+      myStoryVariable.Person2 = person2;
+      myStoryVariable.Noun = noun;
+      myStoryVariable.Verb = verb;
+      myStoryVariable.Exclamation = exclamation;
+      myStoryVariable.Animal = animal;
+      return View(myStoryVariable);
     }
 
   }
